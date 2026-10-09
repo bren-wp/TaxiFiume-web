@@ -1,4 +1,5 @@
 # Taxi Fiume redesign
+- [ ] Verify all pages across phone widths and landscape orientation; resolve responsive edge cases.
 - [x] Optimize mobile photos, navigation and call/enquiry actions; verify small-screen flows.
 - [x] Gently round content photography and refine visual finishing details; verify the rendered result.
 - [x] Restore the full original advertising text on the homepage and verify the contact link.
