@@ -40,13 +40,8 @@ function Home() {
             <span className="status-dot" />
             RIJEKA I OKOLICA <span className="hero-label-divider" /> DOSTUPNI 0–24
           </div>
-          <h1>
-            Taxi Fiume.
-            <br />
-            Vaš grad.
-            {" "}
-            <span>Vaš taxi.</span>
-          </h1>
+          <h1>Taxi Fiume.</h1>
+          <div className="hero-lead">Vaš grad. <span>Vaš taxi.</span></div>
           <p>
             Najbrži taxi u vašem gradu. Sigurno, udobno
             <br className="desktop-break" /> i po pristupačnoj cijeni — kad god nas trebate.
@@ -65,10 +60,6 @@ function Home() {
                 <ArrowRight />
               </Link>
             </Button>
-          </div>
-          <div className="hero-apps">
-            <span>Vaš taxi, jedan dodir bliže.</span>
-            <AppLinks />
           </div>
         </div>
         <div className="hero-caption">
@@ -167,9 +158,7 @@ function Home() {
             <h2>
               Više od vožnje.
               <br />
-              Povjerenje na svakom
-              <br />
-              kilometru.
+              Povjerenje na svakom kilometru.
             </h2>
             <p>
               Taxi Fiume je cijenom pristupačan svima, ali je u isto vrijeme i najbolji način
