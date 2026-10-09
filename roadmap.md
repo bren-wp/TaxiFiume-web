@@ -1,5 +1,5 @@
 # Taxi Fiume redesign
-- [ ] Add and verify linked Schema.org data for taxi services, location, contact and legal pages without changing visible content.
+- [x] Add and verify linked Schema.org data for taxi services, location, contact and legal pages without changing visible content.
 - [x] Split large page, layout, data and stylesheet files into focused modules without changing content.
 - [x] Improve per-page search metadata, canonical links and factual business structured data.
 - [x] Optimize local image delivery and verify pages, contact navigation and regressions (14 routes at desktop, narrow phone, wide phone and landscape; 24 automated tests passed).
