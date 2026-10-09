@@ -19,9 +19,14 @@ export function pageHead(title: string, description: string, options: PageOption
       { name: "twitter:description", content: description },
     ],
     links: [{ rel: "canonical", href: options.path }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify(structuredData(fullTitle, description, options.path)).replace(/</g, "\\u003c"),
-    }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(structuredData(fullTitle, description, options.path)).replace(
+          /</g,
+          "\\u003c",
+        ),
+      },
+    ],
   };
 }
