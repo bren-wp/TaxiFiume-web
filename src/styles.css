@@ -173,6 +173,8 @@
 }
 :root {
   --ink: oklch(0.205 0.008 230);
+  --radius-photo: 16px;
+  --shadow-photo: 0 12px 32px color-mix(in oklch, var(--ink) 9%, transparent);
   --hero-accent: oklch(0.8 0.115 240);
   --hero-foreground: oklch(0.99 0.002 230);
   --footer-muted: oklch(0.73 0.02 230);
@@ -465,7 +467,7 @@ h2 {
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
-  margin-bottom: 38px;
+  margin-bottom: 44px;
 }
 .section-heading-aside {
   max-width: 340px;
@@ -501,7 +503,8 @@ h2 {
   aspect-ratio: 1.85;
   overflow: hidden;
   position: relative;
-  border-radius: 6px;
+  border-radius: var(--radius-photo);
+  box-shadow: var(--shadow-photo);
 }
 .service-image img {
   width: 100%;
@@ -531,6 +534,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
+  gap: 18px;
 }
 .service-title h3 {
   font-size: 28px;
@@ -572,7 +576,8 @@ h2 {
   position: relative;
   aspect-ratio: 1.06;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: var(--radius-photo);
+  box-shadow: var(--shadow-photo);
 }
 .about-photo img {
   width: 100%;
@@ -678,14 +683,18 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 90px;
-  align-items: center;
+  align-items: start;
+}
+.advert-content h2 {
+  text-wrap: balance;
+  max-width: 560px;
 }
 .advert-content p {
   font-size: 16px;
   color: var(--muted-foreground);
   line-height: 1.9;
   margin-bottom: 20px;
-  max-width: 440px;
+  max-width: 510px;
 }
 .site-footer {
   background: var(--ink);
@@ -991,7 +1000,8 @@ h2 {
   width: 100%;
   aspect-ratio: 1.35;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: var(--radius-photo);
+  box-shadow: var(--shadow-photo);
 }
 .detail-gallery {
   display: grid;
@@ -1135,9 +1145,17 @@ h2 {
   aspect-ratio: 1.25;
   width: 100%;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: var(--radius-photo);
+  box-shadow: var(--shadow-photo);
 }
 /* Shared finishing details */
+h1, h2, h3 { text-wrap: balance; }
+.service-card .service-title > svg { flex-shrink: 0; transition: transform .2s; }
+.service-card:hover .service-title > svg { transform: translate(3px, -3px); }
+.service-card:hover .service-title h3 { color: var(--primary); }
+.service-title h3 { transition: color .2s; }
+.about-points span { padding-block: 5px; }
+.advert-section { border-top: 1px solid var(--border); }
 .brand .brand-wordmark { width: 172px; height: 54px; }
 .footer-brand > a > img { width: 172px; height: 54px; }
 .footer-grid svg, .service-category svg { flex-shrink: 0; }
