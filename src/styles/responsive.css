@@ -571,6 +571,38 @@
     display: none;
   }
 }
+@media (max-width: 900px) {
+  .legal-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+    padding-block: 40px 56px;
+  }
+  .legal-navigation ul:not(.legal-contents) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+  }
+  .service-navigation ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-block: 12px;
+  }
+  .service-navigation a {
+    padding-inline: 8px;
+    gap: 8px;
+    font-size: 14px;
+  }
+  .service-navigation-number {
+    display: none;
+  }
+  .coming-actions > a {
+    flex: 1 1 180px;
+  }
+}
+@media (max-width: 380px) {
+  .legal-navigation ul:not(.legal-contents) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

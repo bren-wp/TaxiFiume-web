@@ -42,7 +42,7 @@ export function ServiceDetail({
           )}
           {s.id === "gradski-taksi" && (
             <div className="rental-price">
-              5 km = {rates.cityStart} €{" "}
+              5 km = {formatEuro(rates.cityStart)}{" "}
               <small>· svaki sljedeći km {formatEuro(rates.cityKm)}</small>
             </div>
           )}

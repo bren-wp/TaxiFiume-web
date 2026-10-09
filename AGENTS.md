@@ -22,3 +22,4 @@
 - Render original content photography with LocalPhoto and local size variants, retaining intrinsic dimensions, lazy loading below the fold and high priority for page covers.
 - Keep shared skip navigation, semantic breadcrumbs and globally visible keyboard focus; use Radix Collapsible for the non-modal mobile disclosure so its state and keyboard navigation remain accessible without trapping focus.
 - Share-image metadata accepts only absolute HTTPS URLs of displayed original photos; prepare local share-sized derivatives but omit image tags until a public website URL is available, preventing broken or placeholder previews.
+- Render all legal articles through LegalDocument for consistent document navigation, and derive optional in-page contents from existing headings without rewriting original legal text or dates.
