@@ -1,0 +1,53 @@
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 35px;
+}
+.price-item {
+  border-top: 3px solid var(--primary);
+  padding-top: 28px;
+}
+.price-item h3 {
+  font-size: 23px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.big-price {
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.price-unit {
+  font-size: 16px;
+  color: var(--muted-foreground);
+  margin-top: 8px;
+}
+.price-item > p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--muted-foreground);
+  margin-top: 15px;
+}
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--border);
+  padding: 17px 0;
+  font-size: 16px;
+}
+.price-row strong {
+  white-space: nowrap;
+}
+.price-download {
+  margin-top: 35px;
+}
+.price-notes {
+  margin-top: 40px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--muted-foreground);
+}

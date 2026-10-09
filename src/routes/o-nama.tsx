@@ -1,3 +1,4 @@
+import { LocalPhoto } from "@/components/fiume/local-photo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ShieldCheck, Clock3, Wallet } from "lucide-react";
 import { SiteLayout, PageIntro, CallBand } from "@/components/fiume/layout";
@@ -6,8 +7,9 @@ import { assets, pageHead } from "@/data/fiume";
 export const Route = createFileRoute("/o-nama")({
   head: () =>
     pageHead(
-      "O nama",
+      "O nama — pouzdan taxi prijevoz u Rijeci",
       "Upoznajte Taxi Fiume — vaš pouzdan prijevoz u Rijeci. Sigurna, udobna i dobro opremljena vozila, dostupna 0–24.",
+      { path: "/o-nama" },
     ),
   component: About,
 });
@@ -21,7 +23,11 @@ function About() {
       />
       <section className="section">
         <div className="container about-grid">
-          <img className="rounded" src={assets.hero.url} alt="Taxi Fiume vozni park u Rijeci" />
+          <LocalPhoto
+            className="fleet-photo"
+            src={assets.hero.url}
+            alt="Taxi Fiume vozni park u Rijeci"
+          />
           <div className="about-copy">
             <span className="eyebrow">IZ RIJEKE. ZA RIJEKU.</span>
             <h2>
@@ -73,10 +79,19 @@ function About() {
               assets.small,
               assets.rear,
             ].map((a, i) => (
-              <img
+              <LocalPhoto
                 key={a.url}
                 src={a.url}
-                alt={`Taxi Fiume vozni park — fotografija ${i + 1}`}
+                alt={
+                  [
+                    "Taxi Fiume osobna vozila na riječkoj rivi",
+                    "Opel Vivaro za kombi prijevoz",
+                    "Unutrašnjost Taxi Fiume vozila",
+                    "Škoda Superb za transfere",
+                    "Taxi Fiume gradsko vozilo",
+                    "Stražnji dio Taxi Fiume vozila",
+                  ][i] ?? "Taxi Fiume vozni park"
+                }
                 loading="lazy"
               />
             ))}

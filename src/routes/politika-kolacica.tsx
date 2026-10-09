@@ -6,6 +6,7 @@ export const Route = createFileRoute("/politika-kolacica")({
     pageHead(
       "Politika kolačića",
       "Informacije o kolačićima i privatnosti na web stranici Taxi Fiume.",
+      { path: "/politika-kolacica" },
     ),
   component: Cookies,
 });

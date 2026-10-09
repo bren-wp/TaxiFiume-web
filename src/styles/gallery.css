@@ -1,0 +1,19 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 35px;
+}
+.fleet-photo {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-photo);
+  box-shadow: var(--shadow-photo);
+}
+.gallery-grid img {
+  aspect-ratio: 1.25;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-photo);
+  box-shadow: var(--shadow-photo);
+}

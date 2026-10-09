@@ -6,8 +6,9 @@ import { assets, rates, formatEuro, pageHead } from "@/data/fiume";
 export const Route = createFileRoute("/cjenik")({
   head: () =>
     pageHead(
-      "Cjenik",
+      "Cjenik taxi prijevoza u Rijeci",
       "Taxi Fiume cjenik: osobno vozilo 5 km = 7 €, kombi prijevoz 5 km = 14 €. Preuzmite službeni cjenik.",
+      { path: "/cjenik" },
     ),
   component: Prices,
 });

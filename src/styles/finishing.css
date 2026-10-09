@@ -1,0 +1,96 @@
+/* Shared finishing details */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+.service-card .service-title > svg {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.service-card:hover .service-title > svg {
+  transform: translate(3px, -3px);
+}
+.service-card:hover .service-title h3 {
+  color: var(--primary);
+}
+.service-title h3 {
+  transition: color 0.2s;
+}
+.about-points span {
+  padding-block: 5px;
+}
+.advert-section {
+  border-top: 1px solid var(--border);
+}
+.brand .brand-wordmark {
+  width: 172px;
+  height: 54px;
+}
+.footer-brand > a > img {
+  width: 172px;
+  height: 54px;
+}
+.footer-grid svg,
+.service-category svg {
+  flex-shrink: 0;
+}
+.social-links a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid color-mix(in oklch, var(--hero-foreground) 25%, transparent);
+  border-radius: 6px;
+}
+.service-category svg {
+  color: var(--primary);
+}
+.service-category {
+  font-size: 12px;
+}
+.service-title > svg {
+  width: 26px;
+  height: 26px;
+}
+.service-card > p {
+  max-width: 510px;
+}
+.service-card:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 8px;
+  border-radius: 6px;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 5px;
+}
+.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  inset-inline: 0;
+  height: 2px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s;
+}
+.desktop-nav a:hover::after,
+.desktop-nav a.active::after {
+  transform: scaleX(1);
+}
+.hero-content {
+  animation: arrival 0.65s ease-out both;
+}
+@keyframes arrival {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

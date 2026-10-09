@@ -1,0 +1,128 @@
+[
+  {
+    "type": "paragraph",
+    "text": "Pravila privatnosti",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Fiume d.o.o. poštuje privatnost svojih korisnika i obrađuje osobne podatke u skladu s Općom uredbom o zaštiti podataka (GDPR) i važećim zakonima Republike Hrvatske.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "1. Podaci koje prikupljamo",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Možemo prikupljati sljedeće podatke:",
+    "items": []
+  },
+  {
+    "type": "list",
+    "text": "ime i prezime broj telefona e-mail adresu GPS lokaciju tijekom naručivanja vožnje podatke o vožnjama podatke o plaćanju tehničke podatke uređaja i aplikacije",
+    "items": [
+      "ime i prezime",
+      "broj telefona",
+      "e-mail adresu",
+      "GPS lokaciju tijekom naručivanja vožnje",
+      "podatke o vožnjama",
+      "podatke o plaćanju",
+      "tehničke podatke uređaja i aplikacije"
+    ]
+  },
+  {
+    "type": "heading",
+    "text": "2. Svrha obrade podataka",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Podaci se obrađuju radi:",
+    "items": []
+  },
+  {
+    "type": "list",
+    "text": "pružanja usluge prijevoza organizacije i realizacije vožnje izdavanja računa korisničke podrške sigurnosti sustava ispunjavanja zakonskih obveza",
+    "items": [
+      "pružanja usluge prijevoza",
+      "organizacije i realizacije vožnje",
+      "izdavanja računa",
+      "korisničke podrške",
+      "sigurnosti sustava",
+      "ispunjavanja zakonskih obveza"
+    ]
+  },
+  {
+    "type": "heading",
+    "text": "3. Lokacijski podaci",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Lokacijski podaci koriste se isključivo za:",
+    "items": []
+  },
+  {
+    "type": "list",
+    "text": "određivanje lokacije preuzimanja korisnika dodjelu najbližeg dostupnog vozila procjenu vremena dolaska vozila",
+    "items": [
+      "određivanje lokacije preuzimanja korisnika",
+      "dodjelu najbližeg dostupnog vozila",
+      "procjenu vremena dolaska vozila"
+    ]
+  },
+  {
+    "type": "heading",
+    "text": "4. Kartična plaćanja",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Kartične transakcije obrađuje Adyen N.V.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Podaci o platnim karticama ne pohranjuju se na sustavima Fiume d.o.o.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "5. Prava korisnika",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Korisnik ima pravo na:",
+    "items": []
+  },
+  {
+    "type": "list",
+    "text": "pristup svojim osobnim podacima ispravak netočnih podataka brisanje podataka ograničenje obrade prenosivost podataka podnošenje prigovora nadležnom tijelu",
+    "items": [
+      "pristup svojim osobnim podacima",
+      "ispravak netočnih podataka",
+      "brisanje podataka",
+      "ograničenje obrade",
+      "prenosivost podataka",
+      "podnošenje prigovora nadležnom tijelu"
+    ]
+  },
+  {
+    "type": "heading",
+    "text": "6. Kontakt za zaštitu podataka",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Za sva pitanja vezana uz obradu osobnih podataka korisnici se mogu obratiti na:",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "E-mail: taxi.fiume051@gmail.com",
+    "items": []
+  }
+]

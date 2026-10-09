@@ -1,0 +1,236 @@
+[
+  {
+    "type": "paragraph",
+    "text": "Uvjeti korištenja",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Posljednje ažuriranje: 2025.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Dobrodošli u Fiume Taxi.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Korištenjem mobilne aplikacije Fiume Taxi i web stranice taxifiume.com prihvaćate ove Uvjete korištenja.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "1. Pružatelj usluge",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Aplikaciju i povezane usluge pruža:",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Fiume d.o.o. Rujevica 6 51000 Rijeka Hrvatska",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "OIB: 22922118994 Matični broj: 04031795",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "2. Opis usluge",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Fiume Taxi korisnicima omogućuje:",
+    "items": []
+  },
+  {
+    "type": "list",
+    "text": "naručivanje taksi prijevoza praćenje dolaska vozila u stvarnom vremenu procjenu cijene vožnje kartično i gotovinsko plaćanje pregled povijesti vožnji elektroničku dostavu računa",
+    "items": [
+      "naručivanje taksi prijevoza",
+      "praćenje dolaska vozila u stvarnom vremenu",
+      "procjenu cijene vožnje",
+      "kartično i gotovinsko plaćanje",
+      "pregled povijesti vožnji",
+      "elektroničku dostavu računa"
+    ]
+  },
+  {
+    "type": "heading",
+    "text": "3. Korisnički račun",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Korisnik je odgovoran za:",
+    "items": []
+  },
+  {
+    "type": "list",
+    "text": "točnost podataka unesenih prilikom registracije sigurnost svog korisničkog računa zaštitu pristupnih podataka",
+    "items": [
+      "točnost podataka unesenih prilikom registracije",
+      "sigurnost svog korisničkog računa",
+      "zaštitu pristupnih podataka"
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "Korisnik se obvezuje da neće koristiti aplikaciju na način koji može ugroziti njezin rad, sigurnost ili dostupnost drugim korisnicima.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "4. Cjenik",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "Gradska tarifa Rijeka",
+    "items": []
+  },
+  {
+    "type": "list",
+    "text": "Vožnja do 5 km: 7,00 EUR Svaki sljedeći kilometar: 1,40 EUR",
+    "items": ["Vožnja do 5 km: 7,00 EUR", "Svaki sljedeći kilometar: 1,40 EUR"]
+  },
+  {
+    "type": "paragraph",
+    "text": "Međugradske vožnje i vožnje izvan grada naplaćuju se prema posebnom cjeniku.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Prikazana cijena u aplikaciji predstavlja procjenu te može odstupati od konačne cijene.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Konačna cijena određuje se prema važećem cjeniku i stvarno izvršenoj usluzi prijevoza.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "5. Načini plaćanja",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Korisnicima su dostupni sljedeći načini plaćanja:",
+    "items": []
+  },
+  {
+    "type": "list",
+    "text": "gotovina (EUR) platne kartice (Visa, Mastercard, Maestro i druge kartice podržane putem Adyen sustava)",
+    "items": [
+      "gotovina (EUR)",
+      "platne kartice (Visa, Mastercard, Maestro i druge kartice podržane putem Adyen sustava)"
+    ]
+  },
+  {
+    "type": "paragraph",
+    "text": "Kartična plaćanja obrađuju se putem Adyen N.V.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Fiume d.o.o. nema pristup punim podacima platnih kartica korisnika.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Sva kartična plaćanja provode se u skladu s PCI DSS sigurnosnim standardima.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "5.1 Izjava o konverziji",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Sve cijene usluga izražene su u eurima (EUR), službenoj valuti Republike Hrvatske.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Iznosi prikazani u aplikaciji i na web stranici služe kao informativna procjena te mogu odstupati od konačne cijene.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Konačni iznos naplate određuje se prema važećem cjeniku i stvarno izvršenoj usluzi prijevoza te se obračunava isključivo u eurima (EUR).",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "5.2 Kartično plaćanje",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Kartična plaćanja obrađuju se putem Adyen N.V.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Prilikom registracije kartice može se izvršiti privremena autorizacija manjeg iznosa radi provjere valjanosti kartice.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Fiume d.o.o. nema pristup kompletnim podacima platnih kartica korisnika.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "6. Otkazivanje vožnje",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Korisnik može otkazati naručenu vožnju prije dolaska vozila bez dodatne naknade.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "7. Odgovornost",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Fiume d.o.o. ulaže razumne napore kako bi aplikacija i povezane usluge bile dostupne i funkcionalne, ali ne jamči neprekidan rad sustava niti odsutnost tehničkih poteškoća.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "8. Intelektualno vlasništvo",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Sav sadržaj aplikacije, web stranice, zaštitni znakovi, grafički elementi i softverska rješenja vlasništvo su Fiume d.o.o. ili njegovih ugovornih partnera te su zaštićeni važećim propisima.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "9. Mjerodavno pravo",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Na ove Uvjete korištenja primjenjuje se pravo Republike Hrvatske.",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Za sve sporove nadležan je stvarno nadležni sud u Rijeci.",
+    "items": []
+  }
+]

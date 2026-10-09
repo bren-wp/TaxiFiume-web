@@ -1,0 +1,128 @@
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 450px;
+  height: calc(100svh - 205px);
+  max-height: 680px;
+  color: var(--hero-foreground);
+  background: var(--ink);
+}
+.hero-photo,
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-photo {
+  object-position: center 61%;
+}
+.hero-shade {
+  background: var(--hero-overlay);
+}
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-block: 44px 64px;
+}
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.status-dot,
+.availability > span {
+  height: 6px;
+  width: 6px;
+  flex-shrink: 0;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--success);
+}
+.hero-label-divider {
+  height: 12px;
+  width: 1px;
+  background: color-mix(in oklch, var(--hero-foreground) 35%, transparent);
+  margin: 0 7px;
+}
+.hero-content h1 {
+  font-size: 80px;
+  line-height: 1.05;
+  font-weight: 800;
+  margin: 25px 0 12px;
+  max-width: 850px;
+}
+.hero-lead {
+  font-size: 34px;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: 23px;
+}
+.hero-lead span {
+  color: var(--hero-accent);
+}
+.hero-content > p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: color-mix(in oklch, var(--hero-foreground) 83%, transparent);
+  max-width: 530px;
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+.hero-actions a {
+  font-size: 16px;
+  gap: 14px;
+  height: 54px;
+}
+.hero-apps {
+  margin-top: 26px;
+}
+.hero-apps > span {
+  font-size: 12px;
+  color: color-mix(in oklch, var(--hero-foreground) 66%, transparent);
+  display: block;
+  margin-bottom: 12px;
+}
+.app-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.app-links img {
+  width: 134px;
+  height: 42px;
+  object-fit: contain;
+}
+.app-links a {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.app-links a:hover {
+  transform: translateY(-2px);
+}
+.hero-caption {
+  position: absolute;
+  bottom: 28px;
+  right: 48px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  text-shadow: 0 1px 4px var(--ink);
+}
+.hero-caption > span {
+  border-left: 1px solid var(--hero-foreground);
+  padding-left: 13px;
+  margin-left: 7px;
+  opacity: 0.7;
+}

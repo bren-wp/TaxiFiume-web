@@ -7,6 +7,7 @@ export const Route = createFileRoute("/coming-soon")({
     pageHead(
       "Uskoro",
       "Taxi Fiume — uskoro nove informacije. Posjetite naslovnicu za sve usluge i kontakt.",
+      { path: "/coming-soon" },
     ),
   component: () => (
     <SiteLayout>

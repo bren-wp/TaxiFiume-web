@@ -7,6 +7,7 @@ export const Route = createFileRoute("/pohvale-i-prituzbe")({
     pageHead(
       "Pohvale i pritužbe",
       "Podijelite svoje iskustvo s Taxi Fiume. Vaše pohvale, pritužbe i prijedlozi pomažu nam poboljšati kvalitetu prijevoza.",
+      { path: "/pohvale-i-prituzbe" },
     ),
   component: Feedback,
 });

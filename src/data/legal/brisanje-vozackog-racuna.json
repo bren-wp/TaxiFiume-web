@@ -1,0 +1,57 @@
+[
+  {
+    "type": "paragraph",
+    "text": "Brisanje vozačkog računa",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Vozači koji koriste Fiume Taxi platformu mogu zatražiti trajno brisanje svog vozačkog računa.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "Kako podnijeti zahtjev",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Zahtjev je potrebno poslati na:",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "E-mail: taxi.fiume051@gmail.com",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Zahtjev treba sadržavati:",
+    "items": []
+  },
+  {
+    "type": "list",
+    "text": "ime i prezime broj telefona e-mail adresu identifikaciju vozača ili vozila",
+    "items": ["ime i prezime", "broj telefona", "e-mail adresu", "identifikaciju vozača ili vozila"]
+  },
+  {
+    "type": "heading",
+    "text": "Rok za brisanje",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Vozački račun bit će trajno obrisan u roku od 30 dana od zaprimanja zahtjeva.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "Zadržavanje podataka",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Određeni podaci mogu ostati pohranjeni tijekom razdoblja propisanog zakonom radi računovodstvenih, poreznih i drugih zakonskih obveza.",
+    "items": []
+  }
+]
