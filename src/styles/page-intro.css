@@ -1,0 +1,73 @@
+.page-intro {
+  padding: 42px 0 65px;
+  position: relative;
+  overflow: hidden;
+  background: var(--secondary);
+}
+.breadcrumbs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted-foreground);
+  margin-bottom: 45px;
+}
+.page-intro h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.page-intro p {
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 540px;
+  color: var(--muted-foreground);
+}
+.page-intro.with-image {
+  color: var(--hero-foreground);
+  background: var(--ink);
+  min-height: 380px;
+}
+.page-intro.with-image:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay);
+}
+.page-intro-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 54%;
+}
+.page-intro .container {
+  position: relative;
+  z-index: 1;
+
+  width: min(1280px, calc(100% - 80px));
+}
+.with-image .breadcrumbs,
+.with-image p {
+  color: var(--footer-muted);
+}
+.call-band {
+  background: var(--secondary);
+  padding-block: 60px;
+}
+.call-band .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  width: min(1280px, calc(100% - 80px));
+}
+.call-band p {
+  font-size: 16px;
+  color: var(--muted-foreground);
+  margin-top: 15px;
+  line-height: 1.8;
+}

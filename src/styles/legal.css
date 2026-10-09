@@ -1,0 +1,23 @@
+.legal-content {
+  max-width: 800px;
+  padding-block: 65px 85px;
+}
+.legal-content h2 {
+  font-size: 23px;
+  margin: 32px 0 15px;
+}
+.legal-content p,
+.legal-content li {
+  font-size: 16px;
+  line-height: 1.95;
+  color: var(--muted-foreground);
+  margin-bottom: 13px;
+}
+.legal-content ul {
+  padding-left: 23px;
+  list-style: disc;
+  margin-bottom: 22px;
+}
+.legal-content a {
+  color: var(--primary);
+}

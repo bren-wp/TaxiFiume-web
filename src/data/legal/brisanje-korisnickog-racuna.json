@@ -1,0 +1,61 @@
+[
+  {
+    "type": "paragraph",
+    "text": "Brisanje korisničkog računa",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Korisnik mobilne aplikacije Fiume Taxi može u bilo kojem trenutku zatražiti trajno brisanje svog korisničkog računa.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "Kako podnijeti zahtjev",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Zahtjev za brisanje računa potrebno je poslati na:",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "E-mail: taxi.fiume051@gmail.com",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Preporučuje se da zahtjev sadrži:",
+    "items": []
+  },
+  {
+    "type": "list",
+    "text": "ime i prezime broj telefona povezan s računom e-mail adresu povezanu s računom",
+    "items": [
+      "ime i prezime",
+      "broj telefona povezan s računom",
+      "e-mail adresu povezanu s računom"
+    ]
+  },
+  {
+    "type": "heading",
+    "text": "Rok za brisanje",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Račun će biti trajno obrisan u roku od 30 dana od zaprimanja zahtjeva.",
+    "items": []
+  },
+  {
+    "type": "heading",
+    "text": "Zadržavanje podataka",
+    "items": []
+  },
+  {
+    "type": "paragraph",
+    "text": "Određeni podaci mogu biti zadržani nakon brisanja računa ukoliko je njihovo čuvanje propisano važećim zakonskim propisima Republike Hrvatske ili Europske unije.",
+    "items": []
+  }
+]

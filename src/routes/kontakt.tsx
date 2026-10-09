@@ -8,8 +8,9 @@ export const Route = createFileRoute("/kontakt")({
     typeof search["tema"] === "string" ? { tema: search["tema"] } : {},
   head: () =>
     pageHead(
-      "Kontakt",
+      "Kontakt i naručivanje taxija u Rijeci",
       "Kontaktirajte Taxi Fiume na 051 515 515 ili taxi.fiume051@gmail.com. Dostupni smo 24 sata dnevno, 7 dana u tjednu.",
+      { path: "/kontakt", business: true },
     ),
   component: Contact,
 });

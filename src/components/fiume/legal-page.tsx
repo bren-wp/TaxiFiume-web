@@ -1,13 +1,12 @@
 import { SiteLayout, PageIntro } from "./layout";
-import legal from "@/data/legal.json";
+import type { LegalBlock } from "@/data/legal/types";
 import { contact } from "@/data/fiume";
-type Key = keyof typeof legal;
-export function LegalPage({ slug, title }: { slug: Key; title: string }) {
+export function LegalPage({ blocks, title }: { blocks: LegalBlock[]; title: string }) {
   return (
     <SiteLayout>
       <PageIntro title={title} description="Taxi Fiume · Informacije i pravne obavijesti" />
       <article className="container legal-content">
-        {legal[slug].map((block, i) =>
+        {blocks.map((block, i) =>
           block.type === "heading" ? (
             <h2 key={i}>{block.text}</h2>
           ) : block.type === "list" ? (

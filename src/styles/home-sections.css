@@ -1,0 +1,134 @@
+.about-section {
+  background: var(--secondary);
+  padding-block: 96px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.about-photo {
+  position: relative;
+  aspect-ratio: 1.06;
+  overflow: hidden;
+  border-radius: var(--radius-photo);
+  box-shadow: var(--shadow-photo);
+}
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-photo:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--photo-overlay);
+}
+.photo-label {
+  position: absolute;
+  bottom: 26px;
+  left: 26px;
+  color: var(--hero-foreground);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 600;
+}
+.about-copy > p {
+  font-size: 16px;
+  line-height: 1.95;
+  color: var(--muted-foreground);
+  margin: 24px 0;
+}
+.about-points {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.about-points span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.about-points svg {
+  color: var(--primary);
+  width: 18px;
+}
+.about-copy a {
+  font-size: 15px;
+  gap: 24px;
+}
+.app-section {
+  background: var(--ink);
+  color: var(--hero-foreground);
+  padding-block: 96px;
+}
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+.app-grid > div > p {
+  max-width: 410px;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--footer-muted);
+  margin: 23px 0 28px;
+}
+.app-steps > div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-block: 25px;
+  border-bottom: 1px solid color-mix(in oklch, var(--hero-foreground) 15%, transparent);
+}
+.app-steps > div:last-child {
+  border-bottom: none;
+}
+.app-steps > div > span {
+  font-size: 15px;
+  color: var(--primary);
+  font-weight: 800;
+}
+.app-steps h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.app-steps p {
+  font-size: 14px;
+  color: var(--footer-muted);
+}
+.app-steps svg {
+  width: 22px;
+  color: var(--primary);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.advert-section {
+  padding-block: 78px;
+}
+.advert-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: start;
+}
+.advert-content h2 {
+  text-wrap: balance;
+  max-width: 560px;
+}
+.advert-content p {
+  font-size: 16px;
+  color: var(--muted-foreground);
+  line-height: 1.9;
+  margin-bottom: 20px;
+  max-width: 510px;
+}

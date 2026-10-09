@@ -14,4 +14,12 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+  it.each([
+    "/cjenik", "/vrste-vozila", "/o-nama", "/kontakt", "/prijave-za-posao",
+    "/pohvale-i-prituzbe", "/pravila-privatnosti", "/uvjeti-koristenja", "/impressum",
+    "/brisanje-korisnickog-racuna", "/brisanje-vozackog-racuna", "/politika-kolacica", "/coming-soon",
+  ])("preserves the directly addressable original page %s", (path) => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.matchRoutes(path).at(-1)?.routeId).toBe(path);
+  });
 });

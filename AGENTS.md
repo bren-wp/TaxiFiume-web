@@ -14,3 +14,8 @@
 - Contact and application forms prepare email drafts rather than claim delivery; no message-delivery service is connected.
 - Keep mobile quick-contact actions in SiteLayout with safe-area spacing and hide them while form fields are focused, so every page stays usable without covering the keyboard workflow.
 - Apply shared mobile layouts to wide phones and short landscape viewports as well as narrow screens, preserving scrollable menus and safe-area insets without disabling browser zoom.
+- Keep homepage sections, header, footer, page introductions, contact actions and route-error views in focused components; route files compose them rather than duplicate markup.
+- Keep styles in ordered domain stylesheets imported by styles.css, preserving the cascade with responsive rules last.
+- Keep business data in focused modules behind the fiume entry point and legal documents in per-page JSON files, so edits remain localized and unrelated legal content is not loaded.
+- Centralize leaf metadata in lib/seo.ts with mandatory self-referencing paths and factual business schema; leave canonical tags off the root and defer sitemaps until a public URL exists.
+- Render original content photography with LocalPhoto and local size variants, retaining intrinsic dimensions, lazy loading below the fold and high priority for page covers.

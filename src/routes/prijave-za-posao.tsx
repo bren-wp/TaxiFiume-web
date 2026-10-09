@@ -6,8 +6,9 @@ import { assets, contact, pageHead } from "@/data/fiume";
 export const Route = createFileRoute("/prijave-za-posao")({
   head: () =>
     pageHead(
-      "Prijava za posao",
+      "Posao taksista u Rijeci",
       "Pridružite se timu profesionalnih taksista Taxi Fiume u Rijeci. Pripremite svoju prijavu za posao.",
+      { path: "/prijave-za-posao" },
     ),
   component: Jobs,
 });
