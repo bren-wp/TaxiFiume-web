@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Download } from "lucide-react";
 import { SiteLayout, PageIntro, CallBand } from "@/components/fiume/layout";
 import { Button } from "@/components/ui/button";
-import { assets, rates, formatEuro, pageHead } from "@/data/fiume";
+import { assets, rates, formatEuro } from "@/data/fiume";
+import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/cjenik")({
   head: () =>
     pageHead(

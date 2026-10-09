@@ -3,7 +3,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ShieldCheck, Clock3, Wallet } from "lucide-react";
 import { SiteLayout, PageIntro, CallBand } from "@/components/fiume/layout";
 import { Button } from "@/components/ui/button";
-import { assets, pageHead } from "@/data/fiume";
+import { assets } from "@/data/fiume";
+import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/o-nama")({
   head: () =>
     pageHead(
