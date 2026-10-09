@@ -1,4 +1,5 @@
 # Taxi Fiume redesign
+- [x] Gently round content photography and refine visual finishing details; verify the rendered result.
 - [x] Restore the full original advertising text on the homepage and verify the contact link.
 - [x] Refine the visual hierarchy, original photography and premium presentation across the site.
 - [x] Remove the additional icon beside the logo and verify navigation and page layouts.
