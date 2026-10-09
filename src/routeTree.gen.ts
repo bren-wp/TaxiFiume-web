@@ -10,33 +10,207 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BrisanjeKorisnickogRacunaRouteImport } from './routes/brisanje-korisnickog-racuna'
+import { Route as BrisanjeVozackogRacunaRouteImport } from './routes/brisanje-vozackog-racuna'
+import { Route as CjenikRouteImport } from './routes/cjenik'
+import { Route as ComingSoonRouteImport } from './routes/coming-soon'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as ONamaRouteImport } from './routes/o-nama'
+import { Route as PohvaleIPrituzbeRouteImport } from './routes/pohvale-i-prituzbe'
+import { Route as PolitikaKolacicaRouteImport } from './routes/politika-kolacica'
+import { Route as PravilaPrivatnostiRouteImport } from './routes/pravila-privatnosti'
+import { Route as PrijaveZaPosaoRouteImport } from './routes/prijave-za-posao'
+import { Route as UvjetiKoristenjaRouteImport } from './routes/uvjeti-koristenja'
+import { Route as VrsteVozilaRouteImport } from './routes/vrste-vozila'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BrisanjeKorisnickogRacunaRoute =
+  BrisanjeKorisnickogRacunaRouteImport.update({
+    id: '/brisanje-korisnickog-racuna',
+    path: '/brisanje-korisnickog-racuna',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BrisanjeVozackogRacunaRoute = BrisanjeVozackogRacunaRouteImport.update({
+  id: '/brisanje-vozackog-racuna',
+  path: '/brisanje-vozackog-racuna',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CjenikRoute = CjenikRouteImport.update({
+  id: '/cjenik',
+  path: '/cjenik',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComingSoonRoute = ComingSoonRouteImport.update({
+  id: '/coming-soon',
+  path: '/coming-soon',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ONamaRoute = ONamaRouteImport.update({
+  id: '/o-nama',
+  path: '/o-nama',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PohvaleIPrituzbeRoute = PohvaleIPrituzbeRouteImport.update({
+  id: '/pohvale-i-prituzbe',
+  path: '/pohvale-i-prituzbe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolitikaKolacicaRoute = PolitikaKolacicaRouteImport.update({
+  id: '/politika-kolacica',
+  path: '/politika-kolacica',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PravilaPrivatnostiRoute = PravilaPrivatnostiRouteImport.update({
+  id: '/pravila-privatnosti',
+  path: '/pravila-privatnosti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrijaveZaPosaoRoute = PrijaveZaPosaoRouteImport.update({
+  id: '/prijave-za-posao',
+  path: '/prijave-za-posao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UvjetiKoristenjaRoute = UvjetiKoristenjaRouteImport.update({
+  id: '/uvjeti-koristenja',
+  path: '/uvjeti-koristenja',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VrsteVozilaRoute = VrsteVozilaRouteImport.update({
+  id: '/vrste-vozila',
+  path: '/vrste-vozila',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/brisanje-korisnickog-racuna': typeof BrisanjeKorisnickogRacunaRoute
+  '/brisanje-vozackog-racuna': typeof BrisanjeVozackogRacunaRoute
+  '/cjenik': typeof CjenikRoute
+  '/coming-soon': typeof ComingSoonRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/o-nama': typeof ONamaRoute
+  '/pohvale-i-prituzbe': typeof PohvaleIPrituzbeRoute
+  '/politika-kolacica': typeof PolitikaKolacicaRoute
+  '/pravila-privatnosti': typeof PravilaPrivatnostiRoute
+  '/prijave-za-posao': typeof PrijaveZaPosaoRoute
+  '/uvjeti-koristenja': typeof UvjetiKoristenjaRoute
+  '/vrste-vozila': typeof VrsteVozilaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/brisanje-korisnickog-racuna': typeof BrisanjeKorisnickogRacunaRoute
+  '/brisanje-vozackog-racuna': typeof BrisanjeVozackogRacunaRoute
+  '/cjenik': typeof CjenikRoute
+  '/coming-soon': typeof ComingSoonRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/o-nama': typeof ONamaRoute
+  '/pohvale-i-prituzbe': typeof PohvaleIPrituzbeRoute
+  '/politika-kolacica': typeof PolitikaKolacicaRoute
+  '/pravila-privatnosti': typeof PravilaPrivatnostiRoute
+  '/prijave-za-posao': typeof PrijaveZaPosaoRoute
+  '/uvjeti-koristenja': typeof UvjetiKoristenjaRoute
+  '/vrste-vozila': typeof VrsteVozilaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/brisanje-korisnickog-racuna': typeof BrisanjeKorisnickogRacunaRoute
+  '/brisanje-vozackog-racuna': typeof BrisanjeVozackogRacunaRoute
+  '/cjenik': typeof CjenikRoute
+  '/coming-soon': typeof ComingSoonRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/o-nama': typeof ONamaRoute
+  '/pohvale-i-prituzbe': typeof PohvaleIPrituzbeRoute
+  '/politika-kolacica': typeof PolitikaKolacicaRoute
+  '/pravila-privatnosti': typeof PravilaPrivatnostiRoute
+  '/prijave-za-posao': typeof PrijaveZaPosaoRoute
+  '/uvjeti-koristenja': typeof UvjetiKoristenjaRoute
+  '/vrste-vozila': typeof VrsteVozilaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/brisanje-korisnickog-racuna'
+    | '/brisanje-vozackog-racuna'
+    | '/cjenik'
+    | '/coming-soon'
+    | '/impressum'
+    | '/kontakt'
+    | '/o-nama'
+    | '/pohvale-i-prituzbe'
+    | '/politika-kolacica'
+    | '/pravila-privatnosti'
+    | '/prijave-za-posao'
+    | '/uvjeti-koristenja'
+    | '/vrste-vozila'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/brisanje-korisnickog-racuna'
+    | '/brisanje-vozackog-racuna'
+    | '/cjenik'
+    | '/coming-soon'
+    | '/impressum'
+    | '/kontakt'
+    | '/o-nama'
+    | '/pohvale-i-prituzbe'
+    | '/politika-kolacica'
+    | '/pravila-privatnosti'
+    | '/prijave-za-posao'
+    | '/uvjeti-koristenja'
+    | '/vrste-vozila'
+  id:
+    | '__root__'
+    | '/'
+    | '/brisanje-korisnickog-racuna'
+    | '/brisanje-vozackog-racuna'
+    | '/cjenik'
+    | '/coming-soon'
+    | '/impressum'
+    | '/kontakt'
+    | '/o-nama'
+    | '/pohvale-i-prituzbe'
+    | '/politika-kolacica'
+    | '/pravila-privatnosti'
+    | '/prijave-za-posao'
+    | '/uvjeti-koristenja'
+    | '/vrste-vozila'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BrisanjeKorisnickogRacunaRoute: typeof BrisanjeKorisnickogRacunaRoute
+  BrisanjeVozackogRacunaRoute: typeof BrisanjeVozackogRacunaRoute
+  CjenikRoute: typeof CjenikRoute
+  ComingSoonRoute: typeof ComingSoonRoute
+  ImpressumRoute: typeof ImpressumRoute
+  KontaktRoute: typeof KontaktRoute
+  ONamaRoute: typeof ONamaRoute
+  PohvaleIPrituzbeRoute: typeof PohvaleIPrituzbeRoute
+  PolitikaKolacicaRoute: typeof PolitikaKolacicaRoute
+  PravilaPrivatnostiRoute: typeof PravilaPrivatnostiRoute
+  PrijaveZaPosaoRoute: typeof PrijaveZaPosaoRoute
+  UvjetiKoristenjaRoute: typeof UvjetiKoristenjaRoute
+  VrsteVozilaRoute: typeof VrsteVozilaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +222,115 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/brisanje-korisnickog-racuna': {
+      id: '/brisanje-korisnickog-racuna'
+      path: '/brisanje-korisnickog-racuna'
+      fullPath: '/brisanje-korisnickog-racuna'
+      preLoaderRoute: typeof BrisanjeKorisnickogRacunaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brisanje-vozackog-racuna': {
+      id: '/brisanje-vozackog-racuna'
+      path: '/brisanje-vozackog-racuna'
+      fullPath: '/brisanje-vozackog-racuna'
+      preLoaderRoute: typeof BrisanjeVozackogRacunaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cjenik': {
+      id: '/cjenik'
+      path: '/cjenik'
+      fullPath: '/cjenik'
+      preLoaderRoute: typeof CjenikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coming-soon': {
+      id: '/coming-soon'
+      path: '/coming-soon'
+      fullPath: '/coming-soon'
+      preLoaderRoute: typeof ComingSoonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/o-nama': {
+      id: '/o-nama'
+      path: '/o-nama'
+      fullPath: '/o-nama'
+      preLoaderRoute: typeof ONamaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pohvale-i-prituzbe': {
+      id: '/pohvale-i-prituzbe'
+      path: '/pohvale-i-prituzbe'
+      fullPath: '/pohvale-i-prituzbe'
+      preLoaderRoute: typeof PohvaleIPrituzbeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politika-kolacica': {
+      id: '/politika-kolacica'
+      path: '/politika-kolacica'
+      fullPath: '/politika-kolacica'
+      preLoaderRoute: typeof PolitikaKolacicaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pravila-privatnosti': {
+      id: '/pravila-privatnosti'
+      path: '/pravila-privatnosti'
+      fullPath: '/pravila-privatnosti'
+      preLoaderRoute: typeof PravilaPrivatnostiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prijave-za-posao': {
+      id: '/prijave-za-posao'
+      path: '/prijave-za-posao'
+      fullPath: '/prijave-za-posao'
+      preLoaderRoute: typeof PrijaveZaPosaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/uvjeti-koristenja': {
+      id: '/uvjeti-koristenja'
+      path: '/uvjeti-koristenja'
+      fullPath: '/uvjeti-koristenja'
+      preLoaderRoute: typeof UvjetiKoristenjaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vrste-vozila': {
+      id: '/vrste-vozila'
+      path: '/vrste-vozila'
+      fullPath: '/vrste-vozila'
+      preLoaderRoute: typeof VrsteVozilaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BrisanjeKorisnickogRacunaRoute: BrisanjeKorisnickogRacunaRoute,
+  BrisanjeVozackogRacunaRoute: BrisanjeVozackogRacunaRoute,
+  CjenikRoute: CjenikRoute,
+  ComingSoonRoute: ComingSoonRoute,
+  ImpressumRoute: ImpressumRoute,
+  KontaktRoute: KontaktRoute,
+  ONamaRoute: ONamaRoute,
+  PohvaleIPrituzbeRoute: PohvaleIPrituzbeRoute,
+  PolitikaKolacicaRoute: PolitikaKolacicaRoute,
+  PravilaPrivatnostiRoute: PravilaPrivatnostiRoute,
+  PrijaveZaPosaoRoute: PrijaveZaPosaoRoute,
+  UvjetiKoristenjaRoute: UvjetiKoristenjaRoute,
+  VrsteVozilaRoute: VrsteVozilaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
