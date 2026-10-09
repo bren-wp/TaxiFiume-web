@@ -1,7 +1,89 @@
-import {createFileRoute,Link} from '@tanstack/react-router';
-import {ArrowUpRight,ShieldCheck,Clock3,Wallet} from 'lucide-react';
-import {SiteLayout,PageIntro,CallBand} from '@/components/fiume/layout';
-import {Button} from '@/components/ui/button';
-import {assets,pageHead} from '@/data/fiume';
-export const Route=createFileRoute('/o-nama')({head:()=>pageHead('O nama','Upoznajte Taxi Fiume — vaš pouzdan prijevoz u Rijeci. Sigurna, udobna i dobro opremljena vozila, dostupna 0–24.'),component:About});
-function About(){return <SiteLayout><PageIntro title="O nama" description="Taxi Fiume je cijenom pristupačan svima, ali je u isto vrijeme i najbolji način prijevoza." image={assets.rijeka.url}/><section className="section"><div className="container about-grid"><img className="rounded" src={assets.hero.url} alt="Taxi Fiume vozni park u Rijeci"/><div className="about-copy"><span className="eyebrow">IZ RIJEKE. ZA RIJEKU.</span><h2>Vaše povjerenje.<br/>Naša odgovornost.</h2><p>Brinemo o svojim klijentima upravo na način da stavljamo njihove želje, potrebe te njihovo zadovoljstvo na prvo mjesto! Naručite svoje vozilo i uživajte u kvaliteti naših usluga!</p><div className="about-points"><span><ShieldCheck/>Povjerenje</span><span><Clock3/>7 dana u tjednu</span><span><Wallet/>Najniže cijene</span></div><Button asChild variant="outline"><Link to="/kontakt">Javite nam se<ArrowUpRight/></Link></Button></div></div></section><section className="about-section"><div className="container"><span className="eyebrow">SIGURNOST I UDOBNOST</span><h2>Naša vozila</h2><p className="price-notes">Kako nam je sigurnost i udobnost naših klijenata na prvom mjestu, nudimo vam prijevoz putnika novim, sigurnim i dobro opremljenim vozilima.</p><div className="gallery-grid">{[assets.city,assets.van,assets.interior,assets.transfer,assets.small,assets.rear].map((a,i)=><img key={a.url} src={a.url} alt={`Taxi Fiume vozni park — fotografija ${i+1}`} loading="lazy"/>)}</div></div></section><CallBand/></SiteLayout>}
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight, ShieldCheck, Clock3, Wallet } from "lucide-react";
+import { SiteLayout, PageIntro, CallBand } from "@/components/fiume/layout";
+import { Button } from "@/components/ui/button";
+import { assets, pageHead } from "@/data/fiume";
+export const Route = createFileRoute("/o-nama")({
+  head: () =>
+    pageHead(
+      "O nama",
+      "Upoznajte Taxi Fiume — vaš pouzdan prijevoz u Rijeci. Sigurna, udobna i dobro opremljena vozila, dostupna 0–24.",
+    ),
+  component: About,
+});
+function About() {
+  return (
+    <SiteLayout>
+      <PageIntro
+        title="O nama"
+        description="Taxi Fiume je cijenom pristupačan svima, ali je u isto vrijeme i najbolji način prijevoza."
+        image={assets.rijeka.url}
+      />
+      <section className="section">
+        <div className="container about-grid">
+          <img className="rounded" src={assets.hero.url} alt="Taxi Fiume vozni park u Rijeci" />
+          <div className="about-copy">
+            <span className="eyebrow">IZ RIJEKE. ZA RIJEKU.</span>
+            <h2>
+              Vaše povjerenje.
+              <br />
+              Naša odgovornost.
+            </h2>
+            <p>
+              Brinemo o svojim klijentima upravo na način da stavljamo njihove želje, potrebe te
+              njihovo zadovoljstvo na prvo mjesto! Naručite svoje vozilo i uživajte u kvaliteti
+              naših usluga!
+            </p>
+            <div className="about-points">
+              <span>
+                <ShieldCheck />
+                Povjerenje
+              </span>
+              <span>
+                <Clock3 />7 dana u tjednu
+              </span>
+              <span>
+                <Wallet />
+                Najniže cijene
+              </span>
+            </div>
+            <Button asChild variant="outline">
+              <Link to="/kontakt">
+                Javite nam se
+                <ArrowUpRight />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      <section className="about-section">
+        <div className="container">
+          <span className="eyebrow">SIGURNOST I UDOBNOST</span>
+          <h2>Naša vozila</h2>
+          <p className="price-notes">
+            Kako nam je sigurnost i udobnost naših klijenata na prvom mjestu, nudimo vam prijevoz
+            putnika novim, sigurnim i dobro opremljenim vozilima.
+          </p>
+          <div className="gallery-grid">
+            {[
+              assets.city,
+              assets.van,
+              assets.interior,
+              assets.transfer,
+              assets.small,
+              assets.rear,
+            ].map((a, i) => (
+              <img
+                key={a.url}
+                src={a.url}
+                alt={`Taxi Fiume vozni park — fotografija ${i + 1}`}
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+      <CallBand />
+    </SiteLayout>
+  );
+}

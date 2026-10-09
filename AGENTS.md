@@ -10,5 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Keep shared Taxi Fiume navigation and footer in a reusable site layout, with distinct TanStack content routes, so every original page remains directly addressable.
-- Keep original assets in CDN pointer imports and source-derived service data in a shared module, so imagery and prices remain consistent across pages.
+- Serve optimized original media from local public assets and keep source-derived service data in a shared module, so media stays self-contained and prices remain consistent across pages.
 - Contact and application forms prepare email drafts rather than claim delivery; no message-delivery service is connected.
