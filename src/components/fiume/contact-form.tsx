@@ -37,7 +37,7 @@ export function ContactForm({
     );
   }
   return (
-    <form className="message-form" onSubmit={submit}>
+    <form className="message-form" onSubmit={submit} onChange={() => setDraft("")}>
       <div className="form-pair">
         <label>
           Ime i prezime *

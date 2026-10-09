@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { SiteLayout, PageIntro, CallBand } from "@/components/fiume/layout";
 import { Button } from "@/components/ui/button";
-import { assets, services, pageHead } from "@/data/fiume";
+import { assets, services, rates, formatEuro, pageHead } from "@/data/fiume";
 export const Route = createFileRoute("/vrste-vozila")({
   head: () =>
     pageHead(
@@ -60,24 +60,20 @@ function Services() {
               )}
               {s.id === "rent-a-car" && (
                 <div className="rental-price">
-                  79,50 € <small>/ dan · Opel Vivaro</small>
+                  {formatEuro(rates.rental)} <small>/ dan · Opel Vivaro</small>
                 </div>
               )}
               {s.id === "gradski-taksi" && (
                 <div className="rental-price">
-                  5 km = 7 € <small>· svaki sljedeći km 1,40 €</small>
+                  5 km = {rates.cityStart} €{" "}
+                  <small>· svaki sljedeći km {formatEuro(rates.cityKm)}</small>
                 </div>
               )}
               <Button asChild size="lg">
                 <Link
                   to="/kontakt"
                   search={{
-                    tema:
-                      s.title === "Gradski taksi"
-                        ? "Opći upit"
-                        : s.title === "Transferi"
-                          ? "Transfer"
-                          : s.title,
+                    tema: s.topic,
                   }}
                 >
                   Kontaktirajte nas

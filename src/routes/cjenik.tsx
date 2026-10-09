@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Download } from "lucide-react";
 import { SiteLayout, PageIntro, CallBand } from "@/components/fiume/layout";
 import { Button } from "@/components/ui/button";
-import { assets, rates, pageHead } from "@/data/fiume";
+import { assets, rates, formatEuro, pageHead } from "@/data/fiume";
 export const Route = createFileRoute("/cjenik")({
   head: () =>
     pageHead(
@@ -29,15 +29,15 @@ function Prices() {
           <div className="price-grid">
             <div className="price-item">
               <h3>Osobno vozilo</h3>
-              <div className="big-price">{rates.cityStart.toFixed(2).replace(".", ",")} €</div>
+              <div className="big-price">{formatEuro(rates.cityStart)}</div>
               <div className="price-unit">Start i uključenih prvih 5 km unutar grada Rijeke</div>
               <div className="price-row">
                 <span>Svaki sljedeći kilometar unutar grada</span>
-                <strong>1,40 € / km</strong>
+                <strong>{formatEuro(rates.cityKm)} / km</strong>
               </div>
               <div className="price-row">
                 <span>Čekanje</span>
-                <strong>15,00 € / sat</strong>
+                <strong>{formatEuro(rates.waiting)} / sat</strong>
               </div>
               <div className="price-row">
                 <span>Kućni ljubimci</span>
@@ -46,11 +46,11 @@ function Prices() {
             </div>
             <div className="price-item">
               <h3>Kombi prijevoz</h3>
-              <div className="big-price">{rates.vanStart.toFixed(2).replace(".", ",")} €</div>
+              <div className="big-price">{formatEuro(rates.vanStart)}</div>
               <div className="price-unit">Prvih 5 km unutar grada</div>
               <div className="price-row">
                 <span>Svaki sljedeći kilometar unutar grada</span>
-                <strong>2,50 € / km</strong>
+                <strong>{formatEuro(rates.vanKm)} / km</strong>
               </div>
               <p>Kod prijevoza 5+ osoba cijena se može razlikovati.</p>
             </div>

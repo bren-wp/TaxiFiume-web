@@ -40,7 +40,14 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className="site-header">
         <div className="header-inner">
           <Link to="/" aria-label="Taxi Fiume naslovnica" className="brand">
-            <img src={assets.logo.url} alt="Taxi Fiume" />
+            <img className="brand-symbol" src="/favicon.png" alt="" width="36" height="36" />
+            <img
+              className="brand-wordmark"
+              src={assets.logo.url}
+              alt="Taxi Fiume"
+              width="152"
+              height="48"
+            />
           </Link>
           <nav className="desktop-nav" aria-label="Glavni izbornik">
             {nav.map((n) => (
@@ -60,6 +67,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             variant="ghost"
             size="icon"
             className="mobile-menu-button"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            title={open ? "Zatvori izbornik" : "Otvori izbornik"}
             aria-label={open ? "Zatvori izbornik" : "Otvori izbornik"}
             onClick={() => setOpen(!open)}
           >
@@ -67,7 +77,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </Button>
         </div>
         {open && (
-          <nav className="mobile-nav" aria-label="Mobilni izbornik">
+          <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobilni izbornik">
             {nav.map((n) => (
               <Link key={n.to} to={n.to} onClick={() => setOpen(false)}>
                 {n.label}
@@ -167,7 +177,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               </p>
               <div className="social-links">
                 <a
-                  href="https://www.facebook.com/taxifiume"
+                  href="https://www.facebook.com/fiumetaxi/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Taxi Fiume Facebook"
@@ -175,7 +185,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   <Facebook size={19} />
                 </a>
                 <a
-                  href="https://www.instagram.com/taxifiume/"
+                  href="https://www.instagram.com/taxi_fiume/?hl=en"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Taxi Fiume Instagram"
