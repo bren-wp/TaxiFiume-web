@@ -1,7 +1,7 @@
 # Taxi Fiume redesign
-- [ ] Split large page, layout, data and stylesheet files into focused modules without changing content.
-- [ ] Improve per-page search metadata, canonical links and factual business structured data.
-- [ ] Optimize local image delivery and verify pages, contact flows and regressions.
+- [x] Split large page, layout, data and stylesheet files into focused modules without changing content.
+- [x] Improve per-page search metadata, canonical links and factual business structured data.
+- [x] Optimize local image delivery and verify pages, contact navigation and regressions (14 routes at desktop, narrow phone, wide phone and landscape; 24 automated tests passed).
 - [ ] Add a sitemap after a public website URL becomes available (blocked: site not published).
 - [x] Verify all pages across phone widths and landscape orientation; resolve responsive edge cases.
 - [x] Optimize mobile photos, navigation and call/enquiry actions; verify small-screen flows.
