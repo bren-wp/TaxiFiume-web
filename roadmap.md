@@ -1,4 +1,5 @@
 # Taxi Fiume redesign
+- [ ] Finish the presentation and navigation of all pages and subpages; verify content, local photos and contact flows across desktop and mobile.
 - [x] Audit and improve screen-reader labels, keyboard focus and contrast across every page; verified zero automated WCAG A/AA findings on 14 pages, three keyboard form flows and mobile menu focus.
 - [x] Verify unique Open Graph titles and descriptions on all 14 pages and prepare six local original cover photographs at 1200×630 for sharing.
 - [ ] Activate share-image tags after a public website URL is available (blocked: site not published); text-only and legal pages have no meaningful cover photograph and retain hosting previews.
