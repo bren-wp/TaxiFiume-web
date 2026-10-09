@@ -18,7 +18,7 @@ export function pageHead(title: string, description: string, options: PageOption
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: fullTitle },
       { name: "twitter:description", content: description },
-      ...socialImageMeta(options.path, import.meta.env.VITE_PUBLIC_SITE_URL),
+      ...socialImageMeta(options.path, import.meta.env['VITE_PUBLIC_SITE_URL']),
     ],
     links: [{ rel: "canonical", href: options.path }],
     scripts: [
