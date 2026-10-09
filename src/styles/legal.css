@@ -23,3 +23,50 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.legal-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 800px);
+  gap: 64px;
+  padding-block: 64px 85px;
+  align-items: start;
+}
+.legal-layout .legal-content {
+  min-width: 0;
+  padding: 0;
+}
+.legal-content > :first-child {
+  margin-top: 0;
+}
+.legal-content h2[id] {
+  scroll-margin-top: 115px;
+}
+.legal-navigation {
+  border-top: 2px solid var(--primary);
+  padding-top: 22px;
+}
+.legal-navigation h2 {
+  font-size: 17px;
+  margin-bottom: 14px;
+}
+.legal-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.legal-navigation a {
+  display: block;
+  min-height: 44px;
+  padding: 11px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+  border-bottom: 1px solid var(--border);
+}
+.legal-navigation a[aria-current="page"],
+.legal-navigation a:hover {
+  color: var(--primary);
+  font-weight: 700;
+}
+.legal-contents a {
+  font-size: 13px;
+}

@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageIntro } from "@/components/fiume/layout";
 import { pageHead } from "@/lib/seo";
+import { LegalDocument } from "@/components/fiume/legal-document";
 export const Route = createFileRoute("/politika-kolacica")({
   head: () =>
     pageHead(
@@ -17,7 +18,7 @@ function Cookies() {
         title="Politika kolačića"
         description="Informacije o privatnosti tijekom posjeta ovoj web stranici."
       />
-      <article className="container legal-content">
+      <LegalDocument>
         <h2>Kolačići na ovoj stranici</h2>
         <p>
           Ova web stranica trenutačno ne postavlja analitičke niti oglašivačke kolačiće i ne koristi
@@ -37,7 +38,7 @@ function Cookies() {
           <Link to="/pravila-privatnosti">Pravila privatnosti</Link>. Za pitanja pišite na{" "}
           <a href="mailto:taxi.fiume051@gmail.com">taxi.fiume051@gmail.com</a>.
         </p>
-      </article>
+      </LegalDocument>
     </SiteLayout>
   );
 }

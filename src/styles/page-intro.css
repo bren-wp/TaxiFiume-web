@@ -71,3 +71,15 @@
   margin-top: 15px;
   line-height: 1.8;
 }
+.coming-content > p {
+  max-width: 640px;
+  margin-block: 24px 30px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--muted-foreground);
+}
+.coming-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
