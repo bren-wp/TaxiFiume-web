@@ -1,6 +1,10 @@
 import { describe, it, expect } from "vitest";
-import { rates, contact } from "./fiume";
+import { rates, contact, assets, services } from "./fiume";
 describe("Original Taxi Fiume service details", () => {
+  it("serves all original media locally without CDN URLs", () => {
+    for (const asset of Object.values(assets)) expect(asset.url).toMatch(/^\/media\/[^/]+$/);
+    for (const service of services) expect(service.image).toMatch(/^\/media\/[^/]+$/);
+  });
   it("retains the city start including the first 5 km", () => expect(rates.cityStart).toBe(7));
   it("retains the additional city kilometre rate", () => expect(rates.cityKm).toBe(1.4));
   it("retains the van start including the first 5 km", () => expect(rates.vanStart).toBe(14));

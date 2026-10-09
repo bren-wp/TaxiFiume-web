@@ -44,7 +44,7 @@ function Home() {
             Taxi Fiume.
             <br />
             Vaš grad.
-            <br />
+            {" "}
             <span>Vaš taxi.</span>
           </h1>
           <p>
