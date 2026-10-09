@@ -40,13 +40,12 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className="site-header">
         <div className="header-inner">
           <Link to="/" aria-label="Taxi Fiume naslovnica" className="brand">
-            <img className="brand-symbol" src="/favicon.png" alt="" width="36" height="36" />
             <img
               className="brand-wordmark"
               src={assets.logo.url}
               alt="Taxi Fiume"
-              width="152"
-              height="48"
+              width="172"
+              height="54"
             />
           </Link>
           <nav className="desktop-nav" aria-label="Glavni izbornik">
