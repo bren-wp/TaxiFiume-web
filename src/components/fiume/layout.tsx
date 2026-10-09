@@ -1,5 +1,5 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Phone,
   ArrowUpRight,
@@ -34,12 +34,34 @@ export function AppLinks() {
 }
 export function SiteLayout({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const menuRef = useRef<HTMLButtonElement>(null);
   const location = useLocation();
+  useEffect(() => {
+    if (!open) return;
+    function dismiss(event: PointerEvent) {
+      if (event.target instanceof Node && !headerRef.current?.contains(event.target)) {
+        setOpen(false);
+      }
+    }
+    function escape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuRef.current?.focus();
+      }
+    }
+    document.addEventListener("pointerdown", dismiss);
+    document.addEventListener("keydown", escape);
+    return () => {
+      document.removeEventListener("pointerdown", dismiss);
+      document.removeEventListener("keydown", escape);
+    };
+  }, [open]);
   return (
     <>
-      <header className="site-header">
+      <header className="site-header" ref={headerRef}>
         <div className="header-inner">
-          <Link to="/" aria-label="Taxi Fiume naslovnica" className="brand">
+          <Link to="/" aria-label="Taxi Fiume naslovnica" className="brand" onClick={() => setOpen(false)}>
             <img
               className="brand-wordmark"
               src={assets.logo.url}
@@ -56,13 +78,14 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             ))}
           </nav>
           <Button asChild className="header-call">
-            <a href={contact.tel}>
+            <a href={contact.tel} aria-label="Nazovite Taxi Fiume: 051 515 515">
               <Phone />
-              051 515 515
+              <span>051 515 515</span>
               <ArrowUpRight />
             </a>
           </Button>
           <Button
+            ref={menuRef}
             variant="ghost"
             size="icon"
             className="mobile-menu-button"
@@ -78,7 +101,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         {open && (
           <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobilni izbornik">
             {nav.map((n) => (
-              <Link key={n.to} to={n.to} onClick={() => setOpen(false)}>
+              <Link key={n.to} to={n.to} aria-current={location.pathname === n.to ? "page" : undefined} onClick={() => setOpen(false)}>
                 {n.label}
                 <ArrowUpRight size={17} />
               </Link>
@@ -214,6 +237,20 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
       </footer>
+      <nav className="mobile-actions" aria-label="Brzi kontakt">
+        <Button asChild size="lg">
+          <a href={contact.tel}>
+            <Phone />
+            Nazovite taxi
+          </a>
+        </Button>
+        <Button asChild size="lg" variant="outline">
+          <Link to="/kontakt" onClick={() => setOpen(false)}>
+            <Mail />
+            Pošaljite upit
+          </Link>
+        </Button>
+      </nav>
     </>
   );
 }
