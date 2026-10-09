@@ -1,4 +1,6 @@
 # Taxi Fiume redesign
+- [ ] Audit and improve screen-reader labels, keyboard focus and contrast across every page; verify real keyboard and form flows.
+- [ ] Verify unique Open Graph titles and descriptions on every page and prepare share-sized local original photos; image tags require an absolute public website URL.
 - [x] Add and verify linked Schema.org data for taxi services, location, contact and legal pages without changing visible content.
 - [x] Split large page, layout, data and stylesheet files into focused modules without changing content.
 - [x] Improve per-page search metadata, canonical links and factual business structured data.
