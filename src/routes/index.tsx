@@ -234,20 +234,23 @@ function Home() {
         <div className="container">
           <span className="eyebrow">VAŠ BREND U POKRETU</span>
           <div className="advert-content">
-            <h2>
-              Vaša reklama.
-              <br />
-              Na našim ulicama.
-            </h2>
+            <h2>Želite postaviti svoju reklamu na naša taxi vozila?</h2>
             <div>
               <p>
-                Nudimo mogućnost oglašavanja na vanjskoj površini naših taxi vozila. Vaša reklama
-                neprestano je vidljiva korisnicima prijevoza i gradu.
+                Želite postaviti svoju reklamu na naša taxi vozila? Nudimo mogućnost oglašavanja
+                na vanjskoj površini vozila. Svaka oglasna reklama neprestano će biti vidljiva
+                svim korisnicima prijevoza što je jedan od najboljih načina oglašavanja.
               </p>
-              <Link to="/kontakt" search={{ tema: "Oglašavanje" }} className="text-link">
-                Razgovarajmo o oglašavanju
-                <ArrowUpRight size={18} />
-              </Link>
+              <p>
+                Ukoliko ste zainteresirani možete poslati upit ili nas kontaktirati za
+                detaljnije informacije.
+              </p>
+              <Button asChild size="lg">
+                <Link to="/kontakt" search={{ tema: "Oglašavanje" }}>
+                  Javite nam se
+                  <ArrowUpRight size={18} />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
