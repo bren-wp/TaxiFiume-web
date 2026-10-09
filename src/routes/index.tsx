@@ -1,8 +1,268 @@
-import {createFileRoute,Link} from '@tanstack/react-router';
-import {ArrowUpRight,ArrowRight,Phone,MapPin,Clock3,ShieldCheck,Wallet,CarFront,Plane,Users,KeyRound} from 'lucide-react';
-import {Button} from '@/components/ui/button';
-import {SiteLayout,AppLinks} from '@/components/fiume/layout';
-import {assets,contact,services,pageHead} from '@/data/fiume';
-export const Route=createFileRoute('/')({head:()=>pageHead('Vaš taxi u Rijeci, 0–24','Taxi Fiume — gradski taxi, kombi prijevoz, transferi i rent a car. Prvih 5 km za 7 €. Nazovite 051 515 515.'),component:Home});
-const icons=[CarFront,Users,Plane,KeyRound];
-function Home(){return <SiteLayout><section className="home-hero"><img className="hero-photo" src={assets.hero.url} alt="Originalna Taxi Fiume vozila na riječkoj rivi" fetchPriority="high"/><div className="hero-shade"/><div className="container hero-content"><div className="hero-label"><span className="status-dot"/>RIJEKA I OKOLICA <span className="hero-label-divider"/> DOSTUPNI 0–24</div><h1>Taxi Fiume.<br/>Vaš grad.<br/><span>Vaš taxi.</span></h1><p>Najbrži taxi u vašem gradu. Sigurno, udobno<br className="desktop-break"/> i po pristupačnoj cijeni — kad god nas trebate.</p><div className="hero-actions"><Button asChild variant="hero" size="lg"><a href={contact.tel}><Phone/>Naručite taxi<ArrowUpRight/></a></Button><Button asChild variant="heroOutline" size="lg"><Link to="/cjenik">Pogledajte cjenik<ArrowRight/></Link></Button></div><div className="hero-apps"><span>Vaš taxi, jedan dodir bliže.</span><AppLinks/></div></div><div className="hero-caption"><MapPin size={14}/> Rijeka, Hrvatska <span>Naš grad. Naše ulice.</span></div></section><section className="trust-strip"><div className="container"><div><Clock3/><span><strong>0–24</strong>Dostupni svaki dan</span></div><div><Wallet/><span><strong>5 km za 7 €</strong>Pristupačne cijene</span></div><div><ShieldCheck/><span><strong>Sigurno i udobno</strong>Vaše zadovoljstvo na prvom mjestu</span></div><div><MapPin/><span><strong>Rijeka i okolica</strong>Uvijek blizu vas</span></div></div></section><section className="section services-section"><div className="container"><div className="section-heading"><div><span className="eyebrow">PRIJEVOZ PO VAŠOJ MJERI</span><h2>Kamo god krenuli,<br/>tu smo za vas.</h2></div><div className="section-heading-aside"><p>Nudimo više vrsta prijevoza kako bismo<br className="desktop-break"/> zadovoljili sve vaše potrebe.</p><Link to="/vrste-vozila" className="text-link">Sve vrste prijevoza<ArrowUpRight size={17}/></Link></div></div><div className="service-grid">{services.map((s,i)=>{const Icon=icons[i] ?? CarFront;return <Link className="service-card" to="/vrste-vozila" hash={s.id} key={s.id}><div className="service-image"><img src={s.image} alt={s.title} loading="lazy"/><span className="service-number">0{i+1}</span></div><div className="service-title"><h3>{s.title}</h3><ArrowUpRight/></div><span className="service-category"><Icon size={14}/>{s.label}</span><p>{s.description}</p></Link>})}</div></div></section><section className="about-section"><div className="container about-grid"><div className="about-photo"><img src={assets.rijeka.url} alt="Taxi Fiume uz Gradski toranj u Rijeci" loading="lazy"/><div className="photo-label"><MapPin size={18}/><span>Iz Rijeke. Za Rijeku.</span></div></div><div className="about-copy"><span className="eyebrow">PRAVI ODABIR ZA VAS</span><h2>Više od vožnje.<br/>Povjerenje na svakom<br/>kilometru.</h2><p>Taxi Fiume je cijenom pristupačan svima, ali je u isto vrijeme i najbolji način prijevoza. Brinemo o svojim klijentima upravo na način da stavljamo njihove želje, potrebe te njihovo zadovoljstvo na prvo mjesto!</p><div className="about-points"><span><ShieldCheck/>Sigurna i dobro opremljena vozila</span><span><Clock3/>7 dana u tjednu, 24 sata dnevno</span><span><Wallet/>Najpristupačnije cijene u gradu i okolici</span></div><Button asChild variant="outline" size="lg"><Link to="/o-nama">Upoznajte Taxi Fiume<ArrowUpRight/></Link></Button></div></div></section><section className="app-section"><div className="container app-grid"><div><span className="eyebrow">TAXI FIUME APLIKACIJA</span><h2>Vaš taxi.<br/>Na vašem dlanu.</h2><p>Od sada naruči svoj Taxi Fiume i preko Android ili iOS mobilne aplikacije te prati gdje se točno tvoj taxi nalazi.</p><AppLinks/></div><div className="app-steps"><div><span>01</span><div><h3>Naručite svoju vožnju</h3><p>Odaberite lokaciju preuzimanja u aplikaciji.</p></div><MapPin/></div><div><span>02</span><div><h3>Pratite dolazak vozila</h3><p>Znajte gdje je vaš taxi u stvarnom vremenu.</p></div><CarFront/></div><div><span>03</span><div><h3>Uživajte u vožnji</h3><p>Do vašeg odredišta sigurno i bez brige.</p></div><ShieldCheck/></div></div></div></section><section className="advert-section"><div className="container"><span className="eyebrow">VAŠ BREND U POKRETU</span><div className="advert-content"><h2>Vaša reklama.<br/>Na našim ulicama.</h2><div><p>Nudimo mogućnost oglašavanja na vanjskoj površini naših taxi vozila. Vaša reklama neprestano je vidljiva korisnicima prijevoza i gradu.</p><Link to="/kontakt" search={{tema:'Oglašavanje'}} className="text-link">Razgovarajmo o oglašavanju<ArrowUpRight size={18}/></Link></div></div></div></section></SiteLayout>}
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowUpRight,
+  ArrowRight,
+  Phone,
+  MapPin,
+  Clock3,
+  ShieldCheck,
+  Wallet,
+  CarFront,
+  Plane,
+  Users,
+  KeyRound,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { SiteLayout, AppLinks } from "@/components/fiume/layout";
+import { assets, contact, services, pageHead } from "@/data/fiume";
+export const Route = createFileRoute("/")({
+  head: () =>
+    pageHead(
+      "Vaš taxi u Rijeci, 0–24",
+      "Taxi Fiume — gradski taxi, kombi prijevoz, transferi i rent a car. Prvih 5 km za 7 €. Nazovite 051 515 515.",
+    ),
+  component: Home,
+});
+const icons = [CarFront, Users, Plane, KeyRound];
+function Home() {
+  return (
+    <SiteLayout>
+      <section className="home-hero">
+        <img
+          className="hero-photo"
+          src={assets.hero.url}
+          alt="Originalna Taxi Fiume vozila na riječkoj rivi"
+          fetchPriority="high"
+        />
+        <div className="hero-shade" />
+        <div className="container hero-content">
+          <div className="hero-label">
+            <span className="status-dot" />
+            RIJEKA I OKOLICA <span className="hero-label-divider" /> DOSTUPNI 0–24
+          </div>
+          <h1>
+            Taxi Fiume.
+            <br />
+            Vaš grad.
+            <br />
+            <span>Vaš taxi.</span>
+          </h1>
+          <p>
+            Najbrži taxi u vašem gradu. Sigurno, udobno
+            <br className="desktop-break" /> i po pristupačnoj cijeni — kad god nas trebate.
+          </p>
+          <div className="hero-actions">
+            <Button asChild variant="hero" size="lg">
+              <a href={contact.tel}>
+                <Phone />
+                Naručite taxi
+                <ArrowUpRight />
+              </a>
+            </Button>
+            <Button asChild variant="heroOutline" size="lg">
+              <Link to="/cjenik">
+                Pogledajte cjenik
+                <ArrowRight />
+              </Link>
+            </Button>
+          </div>
+          <div className="hero-apps">
+            <span>Vaš taxi, jedan dodir bliže.</span>
+            <AppLinks />
+          </div>
+        </div>
+        <div className="hero-caption">
+          <MapPin size={14} /> Rijeka, Hrvatska <span>Naš grad. Naše ulice.</span>
+        </div>
+      </section>
+      <section className="trust-strip">
+        <div className="container">
+          <div>
+            <Clock3 />
+            <span>
+              <strong>0–24</strong>Dostupni svaki dan
+            </span>
+          </div>
+          <div>
+            <Wallet />
+            <span>
+              <strong>5 km za 7 €</strong>Pristupačne cijene
+            </span>
+          </div>
+          <div>
+            <ShieldCheck />
+            <span>
+              <strong>Sigurno i udobno</strong>Vaše zadovoljstvo na prvom mjestu
+            </span>
+          </div>
+          <div>
+            <MapPin />
+            <span>
+              <strong>Rijeka i okolica</strong>Uvijek blizu vas
+            </span>
+          </div>
+        </div>
+      </section>
+      <section className="section services-section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">PRIJEVOZ PO VAŠOJ MJERI</span>
+              <h2>
+                Kamo god krenuli,
+                <br />
+                tu smo za vas.
+              </h2>
+            </div>
+            <div className="section-heading-aside">
+              <p>
+                Nudimo više vrsta prijevoza kako bismo
+                <br className="desktop-break" /> zadovoljili sve vaše potrebe.
+              </p>
+              <Link to="/vrste-vozila" className="text-link">
+                Sve vrste prijevoza
+                <ArrowUpRight size={17} />
+              </Link>
+            </div>
+          </div>
+          <div className="service-grid">
+            {services.map((s, i) => {
+              const Icon = icons[i] ?? CarFront;
+              return (
+                <Link className="service-card" to="/vrste-vozila" hash={s.id} key={s.id}>
+                  <div className="service-image">
+                    <img src={s.image} alt={s.title} loading="lazy" />
+                    <span className="service-number">0{i + 1}</span>
+                  </div>
+                  <div className="service-title">
+                    <h3>{s.title}</h3>
+                    <ArrowUpRight />
+                  </div>
+                  <span className="service-category">
+                    <Icon size={14} />
+                    {s.label}
+                  </span>
+                  <p>{s.description}</p>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      <section className="about-section">
+        <div className="container about-grid">
+          <div className="about-photo">
+            <img
+              src={assets.rijeka.url}
+              alt="Taxi Fiume uz Gradski toranj u Rijeci"
+              loading="lazy"
+            />
+            <div className="photo-label">
+              <MapPin size={18} />
+              <span>Iz Rijeke. Za Rijeku.</span>
+            </div>
+          </div>
+          <div className="about-copy">
+            <span className="eyebrow">PRAVI ODABIR ZA VAS</span>
+            <h2>
+              Više od vožnje.
+              <br />
+              Povjerenje na svakom
+              <br />
+              kilometru.
+            </h2>
+            <p>
+              Taxi Fiume je cijenom pristupačan svima, ali je u isto vrijeme i najbolji način
+              prijevoza. Brinemo o svojim klijentima upravo na način da stavljamo njihove želje,
+              potrebe te njihovo zadovoljstvo na prvo mjesto!
+            </p>
+            <div className="about-points">
+              <span>
+                <ShieldCheck />
+                Sigurna i dobro opremljena vozila
+              </span>
+              <span>
+                <Clock3 />7 dana u tjednu, 24 sata dnevno
+              </span>
+              <span>
+                <Wallet />
+                Najpristupačnije cijene u gradu i okolici
+              </span>
+            </div>
+            <Button asChild variant="outline" size="lg">
+              <Link to="/o-nama">
+                Upoznajte Taxi Fiume
+                <ArrowUpRight />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      <section className="app-section">
+        <div className="container app-grid">
+          <div>
+            <span className="eyebrow">TAXI FIUME APLIKACIJA</span>
+            <h2>
+              Vaš taxi.
+              <br />
+              Na vašem dlanu.
+            </h2>
+            <p>
+              Od sada naruči svoj Taxi Fiume i preko Android ili iOS mobilne aplikacije te prati
+              gdje se točno tvoj taxi nalazi.
+            </p>
+            <AppLinks />
+          </div>
+          <div className="app-steps">
+            <div>
+              <span>01</span>
+              <div>
+                <h3>Naručite svoju vožnju</h3>
+                <p>Odaberite lokaciju preuzimanja u aplikaciji.</p>
+              </div>
+              <MapPin />
+            </div>
+            <div>
+              <span>02</span>
+              <div>
+                <h3>Pratite dolazak vozila</h3>
+                <p>Znajte gdje je vaš taxi u stvarnom vremenu.</p>
+              </div>
+              <CarFront />
+            </div>
+            <div>
+              <span>03</span>
+              <div>
+                <h3>Uživajte u vožnji</h3>
+                <p>Do vašeg odredišta sigurno i bez brige.</p>
+              </div>
+              <ShieldCheck />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="advert-section">
+        <div className="container">
+          <span className="eyebrow">VAŠ BREND U POKRETU</span>
+          <div className="advert-content">
+            <h2>
+              Vaša reklama.
+              <br />
+              Na našim ulicama.
+            </h2>
+            <div>
+              <p>
+                Nudimo mogućnost oglašavanja na vanjskoj površini naših taxi vozila. Vaša reklama
+                neprestano je vidljiva korisnicima prijevoza i gradu.
+              </p>
+              <Link to="/kontakt" search={{ tema: "Oglašavanje" }} className="text-link">
+                Razgovarajmo o oglašavanju
+                <ArrowUpRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
+  );
+}

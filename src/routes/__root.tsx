@@ -79,14 +79,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Taxi Fiume | Vaš taxi u Rijeci" },
-      { name: "description", content: "Taxi Fiume — gradski taxi, kombi prijevoz, transferi i rent a car u Rijeci. Dostupni 0–24 na 051 515 515." },
+      {
+        name: "description",
+        content:
+          "Taxi Fiume — gradski taxi, kombi prijevoz, transferi i rent a car u Rijeci. Dostupni 0–24 na 051 515 515.",
+      },
       { property: "og:title", content: "Taxi Fiume | Vaš taxi u Rijeci" },
-      { property: "og:description", content: "Pouzdan prijevoz u Rijeci i okolici, 24 sata dnevno, 7 dana u tjednu." },
+      {
+        property: "og:description",
+        content: "Pouzdan prijevoz u Rijeci i okolici, 24 sata dnevno, 7 dana u tjednu.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
