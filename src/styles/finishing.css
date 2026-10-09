@@ -62,9 +62,31 @@ h3 {
   border-radius: 6px;
 }
 a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--primary);
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--ring);
   outline-offset: 5px;
+}
+.site-footer :focus-visible,
+.hero :focus-visible,
+.page-intro.with-image :focus-visible {
+  outline-color: var(--focus-on-dark);
+}
+.site-footer a:hover {
+  color: var(--hero-accent);
+  text-decoration: underline;
+}
+.site-footer .eyebrow,
+.app-section .eyebrow,
+.app-steps > div > span,
+.app-steps svg {
+  color: var(--hero-accent);
+}
+.app-section :focus-visible {
+  outline-color: var(--focus-on-dark);
 }
 .desktop-nav a::after {
   content: "";

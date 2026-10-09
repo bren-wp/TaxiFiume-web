@@ -23,7 +23,7 @@ function Jobs() {
       />
       <section className="section">
         <div className="container content-grid">
-          <aside className="contact-aside">
+          <div className="contact-aside">
             <span className="eyebrow">VAŠE NOVO POSLOVNO PUTOVANJE</span>
             <h2>
               Pridružite se
@@ -45,7 +45,7 @@ function Jobs() {
                 <span>{contact.email}</span>
               </a>
             </div>
-          </aside>
+          </div>
           <ContactForm kind="job" />
         </div>
       </section>

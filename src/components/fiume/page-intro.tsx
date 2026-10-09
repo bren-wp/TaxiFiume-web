@@ -22,11 +22,11 @@ export function PageIntro({
         />
       )}
       <div className="container">
-        <div className="breadcrumbs">
+        <nav className="breadcrumbs" aria-label="Putanja stranice">
           <Link to="/">Naslovnica</Link>
-          <span>/</span>
-          <span>{title}</span>
-        </div>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">{title}</span>
+        </nav>
         <span className="eyebrow">TAXI FIUME · RIJEKA</span>
         <h1>{title}</h1>
         <p>{description}</p>

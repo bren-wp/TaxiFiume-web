@@ -8,8 +8,9 @@ export { CallBand } from "./call-band";
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <>
+      <a href="#main-content" className="skip-link">Preskoči na glavni sadržaj</a>
       <SiteHeader />
-      <main id="main-content">{children}</main>
+      <main id="main-content" tabIndex={-1}>{children}</main>
       <SiteFooter />
       <MobileActions />
     </>

@@ -1,6 +1,7 @@
 type PageOptions = { path: string; business?: boolean };
 
 import { structuredData } from "./structured-data";
+import { socialImageMeta } from "./social-preview";
 export { businessSchema } from "./structured-data";
 
 export function pageHead(title: string, description: string, options: PageOptions) {
@@ -17,6 +18,7 @@ export function pageHead(title: string, description: string, options: PageOption
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: fullTitle },
       { name: "twitter:description", content: description },
+      ...socialImageMeta(options.path, import.meta.env['VITE_PUBLIC_SITE_URL']),
     ],
     links: [{ rel: "canonical", href: options.path }],
     scripts: [

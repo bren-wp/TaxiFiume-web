@@ -1,4 +1,7 @@
 # Taxi Fiume redesign
+- [x] Audit and improve screen-reader labels, keyboard focus and contrast across every page; verified zero automated WCAG A/AA findings on 14 pages, three keyboard form flows and mobile menu focus.
+- [x] Verify unique Open Graph titles and descriptions on all 14 pages and prepare six local original cover photographs at 1200×630 for sharing.
+- [ ] Activate share-image tags after a public website URL is available (blocked: site not published); text-only and legal pages have no meaningful cover photograph and retain hosting previews.
 - [x] Add and verify linked Schema.org data for taxi services, location, contact and legal pages without changing visible content.
 - [x] Split large page, layout, data and stylesheet files into focused modules without changing content.
 - [x] Improve per-page search metadata, canonical links and factual business structured data.
