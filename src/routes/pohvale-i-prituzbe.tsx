@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageIntro } from "@/components/fiume/layout";
 import { ContactForm } from "@/components/fiume/contact-form";
-import { pageHead } from "@/data/fiume";
+import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/pohvale-i-prituzbe")({
   head: () =>
     pageHead(

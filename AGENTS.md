@@ -18,4 +18,5 @@
 - Keep styles in ordered domain stylesheets imported by styles.css, preserving the cascade with responsive rules last.
 - Keep business data in focused modules behind the fiume entry point and legal documents in per-page JSON files, so edits remain localized and unrelated legal content is not loaded.
 - Centralize leaf metadata in lib/seo.ts with mandatory self-referencing paths and factual business schema; leave canonical tags off the root and defer sitemaps until a public URL exists.
+- Generate linked Schema.org graphs in lib/structured-data.ts from shared service/contact data; identify contact and legal pages with valid page types and topics, using relative identities until publication and omitting invented coordinates or ratings.
 - Render original content photography with LocalPhoto and local size variants, retaining intrinsic dimensions, lazy loading below the fold and high priority for page covers.

@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Clock3 } from "lucide-react";
 import { SiteLayout, PageIntro } from "@/components/fiume/layout";
 import { ContactForm } from "@/components/fiume/contact-form";
-import { assets, contact, pageHead } from "@/data/fiume";
+import { assets, contact } from "@/data/fiume";
+import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/kontakt")({
   validateSearch: (search: Record<string, unknown>) =>
     typeof search["tema"] === "string" ? { tema: search["tema"] } : {},

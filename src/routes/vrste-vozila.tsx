@@ -1,7 +1,8 @@
 import { ServiceDetail } from "@/components/fiume/service-detail";
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageIntro, CallBand } from "@/components/fiume/layout";
-import { assets, services, pageHead } from "@/data/fiume";
+import { assets, services } from "@/data/fiume";
+import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/vrste-vozila")({
   head: () =>
     pageHead(

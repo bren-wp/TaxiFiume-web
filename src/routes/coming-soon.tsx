@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageIntro } from "@/components/fiume/layout";
 import { Button } from "@/components/ui/button";
-import { pageHead } from "@/data/fiume";
+import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/coming-soon")({
   head: () =>
     pageHead(

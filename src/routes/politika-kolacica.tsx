@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, PageIntro } from "@/components/fiume/layout";
-import { pageHead } from "@/data/fiume";
+import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/politika-kolacica")({
   head: () =>
     pageHead(

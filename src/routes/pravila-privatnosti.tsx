@@ -1,7 +1,7 @@
 import blocks from "@/data/legal/pravila-privatnosti.json";
 import { createFileRoute } from "@tanstack/react-router";
 import { LegalPage } from "@/components/fiume/legal-page";
-import { pageHead } from "@/data/fiume";
+import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/pravila-privatnosti")({
   head: () =>
     pageHead(
