@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useId, useState, type FormEvent } from "react";
 import { Link } from "@tanstack/react-router";
 import { Mail, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,7 @@ export function ContactForm({
   topic?: string;
 }) {
   const [draft, setDraft] = useState("");
+  const noticeId = useId();
   function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const f = new FormData(e.currentTarget);
@@ -37,7 +38,13 @@ export function ContactForm({
     );
   }
   return (
-    <form className="message-form" onSubmit={submit} onChange={() => setDraft("")}>
+    <form
+      className="message-form"
+      aria-label={kind === "job" ? "Prijava za posao" : kind === "feedback" ? "Pohvale, pritužbe i prijedlozi" : "Kontaktni upit"}
+      aria-describedby={noticeId}
+      onSubmit={submit}
+      onChange={() => setDraft("")}
+    >
       <div className="form-pair">
         <label>
           Ime i prezime *
@@ -106,7 +113,7 @@ export function ContactForm({
       </label>
       {kind === "job" && <p className="form-notice">Životopis priložite e-mailu prije slanja.</p>}
       <label className="consent">
-        <input type="checkbox" required />
+        <input type="checkbox" required aria-label="Prihvaćam pravila privatnosti" />
         <span>
           Slažem se i prihvaćam <Link to="/pravila-privatnosti">pravila privatnosti</Link>. *
         </span>
@@ -116,14 +123,16 @@ export function ContactForm({
         Pripremite e-mail
         <ArrowUpRight />
       </Button>
-      <p className="form-notice">
+      <p className="form-notice" id={noticeId}>
         Poruka se šalje putem vaše aplikacije za e-mail. Ovdje se ne pohranjuju uneseni podaci.
       </p>
-      {draft && (
-        <div className="form-success">
-          Vaša poruka je pripremljena. <a href={draft}>Otvorite e-mail i pošaljite poruku ↗</a>
-        </div>
-      )}
+      <div role="status" aria-live="polite" aria-atomic="true">
+        {draft && (
+          <div className="form-success">
+            Vaša poruka je pripremljena. <a href={draft}>Otvorite e-mail i pošaljite poruku ↗</a>
+          </div>
+        )}
+      </div>
     </form>
   );
 }

@@ -2,6 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Phone, ArrowUpRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { assets, contact } from "@/data/fiume";
 import { nav } from "@/data/fiume/navigation";
 export function SiteHeader() {
@@ -30,7 +31,10 @@ export function SiteHeader() {
     };
   }, [open]);
   return (
-    <header className="site-header" ref={headerRef}>
+    <Collapsible open={open} onOpenChange={setOpen} asChild>
+    <header className="site-header" ref={headerRef} onBlur={(event) => {
+      if (event.relatedTarget instanceof Node && !event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+    }}>
       <div className="header-inner">
         <Link
           to="/"
@@ -48,7 +52,7 @@ export function SiteHeader() {
         </Link>
         <nav className="desktop-nav" aria-label="Glavni izbornik">
           {nav.map((n) => (
-            <Link key={n.to} to={n.to} className={location.pathname === n.to ? "active" : ""}>
+            <Link key={n.to} to={n.to} aria-current={location.pathname === n.to ? "page" : undefined} className={location.pathname === n.to ? "active" : ""}>
               {n.label}
             </Link>
           ))}
@@ -60,22 +64,22 @@ export function SiteHeader() {
             <ArrowUpRight />
           </a>
         </Button>
+        <CollapsibleTrigger asChild>
         <Button
           ref={menuRef}
           variant="ghost"
           size="icon"
           className="mobile-menu-button"
           aria-expanded={open}
-          aria-controls="mobile-navigation"
           title={open ? "Zatvori izbornik" : "Otvori izbornik"}
           aria-label={open ? "Zatvori izbornik" : "Otvori izbornik"}
-          onClick={() => setOpen(!open)}
         >
           {open ? <X /> : <Menu />}
         </Button>
+        </CollapsibleTrigger>
       </div>
-      {open && (
-        <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobilni izbornik">
+      <CollapsibleContent asChild>
+        <nav className="mobile-nav" aria-label="Mobilni izbornik">
           {nav.map((n) => (
             <Link
               key={n.to}
@@ -91,7 +95,8 @@ export function SiteHeader() {
             Pohvale i pritužbe
           </Link>
         </nav>
-      )}
+      </CollapsibleContent>
     </header>
+    </Collapsible>
   );
 }

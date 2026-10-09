@@ -17,7 +17,7 @@ function Feedback() {
       <PageIntro title="Pohvale i pritužbe" description="Vaše iskustvo nam je važno." />
       <section className="section">
         <div className="container content-grid">
-          <aside className="contact-aside">
+          <div className="contact-aside">
             <span className="eyebrow">SLUŠAMO VAS</span>
             <h2>
               Vaše mišljenje.
@@ -33,7 +33,7 @@ function Feedback() {
               Pisane prigovore možete poslati na taxi.fiume051@gmail.com. Odgovor dajemo u pisanom
               obliku najkasnije 15 dana od primitka prigovora.
             </p>
-          </aside>
+          </div>
           <ContactForm kind="feedback" />
         </div>
       </section>

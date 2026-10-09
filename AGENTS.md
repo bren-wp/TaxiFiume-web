@@ -20,3 +20,5 @@
 - Centralize leaf metadata in lib/seo.ts with mandatory self-referencing paths and factual business schema; leave canonical tags off the root and defer sitemaps until a public URL exists.
 - Generate linked Schema.org graphs in lib/structured-data.ts from shared service/contact data; identify contact and legal pages with valid page types and topics, using relative identities until publication and omitting invented coordinates or ratings.
 - Render original content photography with LocalPhoto and local size variants, retaining intrinsic dimensions, lazy loading below the fold and high priority for page covers.
+- Keep shared skip navigation, semantic breadcrumbs and globally visible keyboard focus; use Radix Collapsible for the non-modal mobile disclosure so its state and keyboard navigation remain accessible without trapping focus.
+- Share-image metadata accepts only absolute HTTPS URLs of displayed original photos; prepare local share-sized derivatives but omit image tags until a public website URL is available, preventing broken or placeholder previews.

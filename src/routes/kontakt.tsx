@@ -26,7 +26,7 @@ function Contact() {
       />
       <section className="section">
         <div className="container content-grid">
-          <aside className="contact-aside">
+          <div className="contact-aside">
             <span className="eyebrow">TU SMO ZA VAS</span>
             <h2>Razgovarajmo.</h2>
             <p>
@@ -66,7 +66,7 @@ function Contact() {
                 </span>
               </a>
             </div>
-          </aside>
+          </div>
           <ContactForm topic={tema ?? ""} />
         </div>
       </section>
