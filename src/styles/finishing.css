@@ -79,6 +79,15 @@ select:focus-visible,
   color: var(--hero-accent);
   text-decoration: underline;
 }
+.site-footer .eyebrow,
+.app-section .eyebrow,
+.app-steps > div > span,
+.app-steps svg {
+  color: var(--hero-accent);
+}
+.app-section :focus-visible {
+  outline-color: var(--focus-on-dark);
+}
 .desktop-nav a::after {
   content: "";
   position: absolute;
