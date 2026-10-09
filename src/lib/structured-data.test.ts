@@ -57,6 +57,7 @@ describe("Linked Schema.org data", () => {
   });
   it("safely serializes supplied text in the JSON-LD head script", () => {
     const script = pageHead("</script>", "Opis", { path: "/" }).scripts[0];
+    if (!script) throw new Error("Missing JSON-LD script");
     expect(script.children).not.toContain("</script>");
     expect(JSON.parse(script.children)["@graph"].at(-1).name).toContain("</script>");
   });
